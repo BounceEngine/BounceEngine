@@ -20,16 +20,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Engine/Engine.h"
-#include "Platform.h"               // Auto-Generated Header
+#include "Application.h"
 
-#ifdef __PLATFORM_WINDOWS__
-
-#include <Windows.h>
-
-int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, wchar_t* lpCmdLine, int nCmdShow)
+void Application::Init()
 {
-    return Engine::Entry();
+    
 }
-
-#endif
