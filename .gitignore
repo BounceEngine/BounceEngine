@@ -1,0 +1,6 @@
+*.dblite
+__pycache__/
+Release/
+Debug/
+Platform.h
+Target.h
