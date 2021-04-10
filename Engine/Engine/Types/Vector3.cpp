@@ -22,7 +22,6 @@ SOFTWARE.
 
 #include "Vector3.h"
 
-Vector3::Vector3(float X = 0, float Y = 0, float Z = 0)
-{
+Vector3::Vector3(float X = 0, float Y = 0, float Z = 0) {
     
 }

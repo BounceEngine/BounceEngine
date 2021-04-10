@@ -24,16 +24,14 @@ SOFTWARE.
 #include "Core/Application.h"
 #include "Renderer/Window.h"
 
-int Engine::Entry()
-{
+int Engine::Entry() {
 
     Application application;
     application.Init();
 
     Window window = Window(640, 480, "Hello");
 
-    while (running)
-    {
+    while (running) {
         window.Mainloop();
     }
 
@@ -41,7 +39,7 @@ int Engine::Entry()
     return 0;
 }
 
-void Engine::Destroy()
-{
+void Engine::Destroy() {
     running = false;
 }
+

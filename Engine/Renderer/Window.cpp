@@ -25,16 +25,14 @@ SOFTWARE.
 #include "Window.h"
 #include "Engine/Engine.h"
 
-Window::Window(int width, int height, const char* title)
-{
+Window::Window(int width, int height, const char* title) {
 
     if (!glfwInit())
         return;
 
     window = glfwCreateWindow(width, height, title, NULL, NULL);
 
-    if (!window)
-    {
+    if (!window) {
         glfwTerminate();
         return;
     }
@@ -42,23 +40,17 @@ Window::Window(int width, int height, const char* title)
     glfwMakeContextCurrent(window);
 }
 
-void Window::Mainloop()
-{
-    if (!glfwWindowShouldClose(window))
-    {
+void Window::Mainloop() {
+
+    if (!glfwWindowShouldClose(window)) {
+
         glClear(GL_COLOR_BUFFER_BIT);
-
         glfwSwapBuffers(window);
-
         glfwPollEvents();
-    }
-    else
-    {
-        Engine::Destroy();
-    }
+
+    } else Engine::Destroy();
 }
 
-void Window::Destroy()
-{
+void Window::Destroy() {
     glfwTerminate();
 }

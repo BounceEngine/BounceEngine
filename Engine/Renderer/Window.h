@@ -22,8 +22,7 @@ SOFTWARE.
 
 #include "GLFW/glfw3.h"
 
-class Window
-{
+class Window {
 
 private:
 
