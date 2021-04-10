@@ -22,6 +22,7 @@ SOFTWARE.
 
 #include "Engine.h"
 #include "Core/Application.h"
+#include "Renderer/Window.h"
 
 int Engine::Entry()
 {
@@ -29,5 +30,18 @@ int Engine::Entry()
     Application application;
     application.Init();
 
+    Window window = Window(640, 480, "Hello");
+
+    while (running)
+    {
+        window.Mainloop();
+    }
+
+    window.Destroy();
     return 0;
+}
+
+void Engine::Destroy()
+{
+    running = false;
 }

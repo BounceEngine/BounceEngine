@@ -1,5 +1,6 @@
 *.dblite
 __pycache__/
-Bin/
+Binaries/
+Libraries/
 Platform.h
 Target.h

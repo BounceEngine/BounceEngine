@@ -11,7 +11,7 @@ popd
 
 :: Copy Libraries
 pushd ..
-xcopy Engine\Vendor\glfw\src\Debug\glfw3.lib Bin\
+xcopy Engine\Vendor\glfw\src\Debug\glfw3.lib Libraries\
 popd
 
 :: Compile Core Components

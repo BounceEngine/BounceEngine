@@ -20,16 +20,20 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Engine.h"
-#include "Platform.h"               // Auto-Generated Header
+#include "GLFW/glfw3.h"
 
-#ifdef __PLATFORM_WINDOWS__
-
-#include <Windows.h>
-
-int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, wchar_t* lpCmdLine, int nCmdShow)
+class Window
 {
-    return Engine::Entry();
-}
 
-#endif
+private:
+
+    GLFWwindow* window;
+
+public:
+
+    Window(int width, int height, const char* title);
+
+    void Mainloop();
+
+    void Destroy();
+};

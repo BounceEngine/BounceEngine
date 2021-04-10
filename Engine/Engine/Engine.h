@@ -22,5 +22,10 @@ SOFTWARE.
 
 namespace Engine
 {
+
+    inline bool running = true;
+
     int Entry();
+
+    void Destroy();
 }

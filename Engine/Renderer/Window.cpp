@@ -20,16 +20,45 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Engine.h"
-#include "Platform.h"               // Auto-Generated Header
+#include <iostream>
 
-#ifdef __PLATFORM_WINDOWS__
+#include "Window.h"
+#include "Engine/Engine.h"
 
-#include <Windows.h>
-
-int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, wchar_t* lpCmdLine, int nCmdShow)
+Window::Window(int width, int height, const char* title)
 {
-    return Engine::Entry();
+
+    if (!glfwInit())
+        return;
+
+    window = glfwCreateWindow(width, height, title, NULL, NULL);
+
+    if (!window)
+    {
+        glfwTerminate();
+        return;
+    }
+
+    glfwMakeContextCurrent(window);
 }
 
-#endif
+void Window::Mainloop()
+{
+    if (!glfwWindowShouldClose(window))
+    {
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        glfwSwapBuffers(window);
+
+        glfwPollEvents();
+    }
+    else
+    {
+        Engine::Destroy();
+    }
+}
+
+void Window::Destroy()
+{
+    glfwTerminate();
+}
