@@ -1,6 +1,5 @@
 *.dblite
 __pycache__/
-Release/
-Debug/
+Bin/
 Platform.h
 Target.h
