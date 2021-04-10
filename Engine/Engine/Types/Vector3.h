@@ -25,8 +25,10 @@ class Vector3
 
 public:
 
-    float x, y, z = 0;
+    enum AXIS {
+        x, y, z
+    };
 
-    
+    Vector3(float X = 0, float Y = 0, float Z = 0);    
 
 };

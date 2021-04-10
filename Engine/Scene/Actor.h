@@ -29,6 +29,6 @@ class Actor : public Base
 
 public:
 
-    
+    Transform transform = Transform();    
 
 };

@@ -12,8 +12,9 @@ env = Environment(CPPPATH=["Engine", "Engine/Vendor/glfw/include"], CXXFLAGS="/s
 libs = ["glfw3", "gdi32", "opengl32", "msvcrt", "kernel32", "user32", "shell32"]
 
 # Compile Core Components
-engine_sources = glob.glob("Engine/**/*.cpp")
+engine_sources = glob.glob("Engine/**/*.cpp", recursive=True)
 engine_sources.extend(glob.glob("Engine/**/*.c"))
+print(engine_sources)
 
 for file in engine_sources:
 
