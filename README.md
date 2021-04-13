@@ -8,8 +8,7 @@
 
 ## Compiling from source
 ### Windows
-Start off by recursively cloning the repository
-`git clone --recursive https://github.com/BoomerDev/BounceEngine.git`.
+Start off by recursively cloning the repository `git clone --recursive https://github.com/BoomerDev/BounceEngine.git`.
 
 Then enter the `Scripts/` directory and run `Build.bat`.
 
