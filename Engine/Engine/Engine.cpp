@@ -29,7 +29,7 @@ int Engine::Entry() {
     Application application;
     application.Init();
 
-    Window window = Window(640, 480, "Hello");
+    Window window = Window(1280, 720, "Bounce Engine (x64)");
 
     while (running) {
         window.Mainloop();

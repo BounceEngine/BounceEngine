@@ -20,14 +20,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include "Vector3.h"
 #include "Base.h"
+#include "Vector3.h"
 
-class Transform : public Base
-{
+class Transform : public Base {
 
 public:
 
-    Transform();
+    Transform(Vector3 modifiable);
 
 };

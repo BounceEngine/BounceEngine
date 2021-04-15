@@ -20,12 +20,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include <iostream>
-
-class Base {
-public:
-
-    std::string Name;
-
-    std::string Typename;
-};
+namespace API {
+    
+}

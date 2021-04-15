@@ -20,12 +20,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+#include "glad/glad.h"
+#include "RenderObject2D.h"
+
 #include <iostream>
+#include <vector>
 
-class Base {
-public:
+class Renderer { public:
 
-    std::string Name;
+    // Init
+    Renderer();
+    ~Renderer();
 
-    std::string Typename;
+    // Basic Functions
+    int Draw(int renderId, float vertices[]);
+    int Erase(int renderId);
 };

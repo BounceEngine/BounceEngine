@@ -22,8 +22,7 @@ SOFTWARE.
 
 #include "Transform.h"
 
-Transform::Transform()
-{
+Transform::Transform(Vector3 modifiable) {
     this->Name = "Transform";
     this->Typename = "Transform";
 }

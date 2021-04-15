@@ -20,12 +20,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#include <iostream>
+#include "Engine/Types/Base.h"
 
-class Base {
+class Actor : public Base {
+
 public:
 
-    std::string Name;
+    Actor();
+    ~Actor();
 
-    std::string Typename;
 };

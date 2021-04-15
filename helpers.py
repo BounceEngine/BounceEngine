@@ -6,6 +6,15 @@ configurations = [
     "release"
 ]
 
+colors = {
+    "red"     : "\033[31m",
+    "reset"   : "\033[0m",
+    "green"   : "\033[92m",
+    "blue"    : "\033[94m",
+    "yellow"  : "\033[33m",
+    "magenta" : "\033[35m"
+}
+
 def error_arg(a):
     print("Expected argument '%s' was not specified." % a)
     sys.exit(1)
